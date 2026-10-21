@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0b0c10;
+    color: #e0e2ec;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    cursor: crosshair;
+}
+
+/* Floating control panel */
+/* TODO: maybe add collapsible toggle on mobile */
+#panel {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 290px;
+    padding: 14px 16px;
+    max-height: calc(100vh - 28px);
+    overflow-y: auto;
+    background: rgba(16, 18, 27, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+#panel h1 {
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #f1f3f9;
+    letter-spacing: 0.3px;
+}
+
+.control-group {
+    margin-bottom: 11px;
+}
+
+.control-group label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #a4a9be;
+}
+
+.control-group select,
+.control-group input[type="range"],
+.control-group button {
+    width: 100%;
+}
+
+select, button {
+    background: #1e2235;
+    border: 1px solid #323854;
+    color: #e0e2ec;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+select:hover, button:hover {
+    background: #282e47;
+    border-color: #4a537d;
+}
+
+button:active {
+    background: #181c2c;
+}
+
+input[type="range"] {
+    accent-color: #4f75ff;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #cbd0e2;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.checkbox-label input {
+    accent-color: #4f75ff;
+}
+
+.stats {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-top: 12px;
+    font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #8f96b3;
+}
+
+.stats span {
+    color: #cad1ea;
+}
+
+.hint {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #717792;
+    line-height: 1.4;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 8px;
+}
