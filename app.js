@@ -442,6 +442,7 @@ function render(now) {
     }
 
     gl.useProgram(program);
+
     gl.uniform2f(uniforms.u_resolution, canvas.width, canvas.height);
 
     const [cxHi, cxLo] = splitFloat(state.centerX);

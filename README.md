@@ -1,4 +1,4 @@
-# Mandelbrot Explorer
+# Fractal Explorer
 
 GPU-rendered Mandelbrot/Julia set viewer for the Fractal card.
 Built with WebGL 2 — uses double-single float emulation in the shader so you can zoom past where regular floats break down.

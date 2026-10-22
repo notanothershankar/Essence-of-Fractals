@@ -3,76 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Essence of Fractals </title>
+    <title>Mandelbrot & Julia Explorer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <canvas id="canvas"></canvas>
 
-    <div id="Control-panel">
-        <h1> Fractal World </h1>
+    <div id="panel">
+        <h1>Mandelbrot Explorer</h1>
 
-        <div class="controls">
-            <label for="select-preset">Cool Finds</label>
+        <div class="control-group">
+            <label for="select-preset">Cool Places</label>
             <select id="select-preset">
-                <option value="default"> Normal view </option>
-                <option value="seahorse"> Seahorse Valley </option>
-                <option value="spiral"> Black Abyss </option>
-                <option value="minibrot"> Mandelbrot </option>
-                <option value="elephant"> Elephant valley </option>
-                <option value="rabbit"> Douady's Rabbit </option>
+                <option value="default">Default View</option>
+                <option value="seahorse">Seahorse Valley</option>
+                <option value="spiral">Deep Spiral</option>
+                <option value="minibrot">Mini Mandelbrot</option>
+                <option value="elephant">Elephant Valley</option>
+                <option value="rabbit">Douady's Rabbit (Julia)</option>
             </select>
         </div>
 
-        <div class="conrols">
+        <div class="control-group">
             <label for="slider-iter">
-                <span> Iterations </span>
+                <span>Iterations</span>
                 <span id="label-iter">350</span>
             </label>
             <input type="range" id="slider-iter" min="60" max="2500" step="20" value="350">
         </div>
 
-        <div class="controls">
-            <label for="select-palette"> Palette </label>
+        <div class="control-group">
+            <label for="select-palette">Palette</label>
             <select id="select-palette">
-                <option value="0"> The Blues </option>
-                <option value="1"> The Reds</option>
-                <option value="2"> The Weird ones </option>
-                <option value="3"> IDK what to call this </option>
-                <option value="4"> Auroras </option>
-                <option value="5"> Black and whites </option>
-                <option value="6"> Random shit </option>
+                <option value="0">Electric Blue</option>
+                <option value="1">Fire &amp; Ember</option>
+                <option value="2">Acid Green</option>
+                <option value="3">Psychedelic Rainbow</option>
+                <option value="4">Deep Purple</option>
+                <option value="5">Monochrome</option>
+                <option value="6">Orbit Trap</option>
             </select>
         </div>
 
-        <div class="controls">
+        <div class="control-group">
             <label class="checkbox-label">
                 <input type="checkbox" id="chk-julia">
                 <span>Switch to Julia Set</span>
             </label>
             <label class="checkbox-label">
                 <input type="checkbox" id="chk-animate" checked>
-                <span> Cycle palette colors </span>
+                <span>Cycle Palette Colors</span>
             </label>
         </div>
 
-        <div class="controls" style="margin-top: 10px;">
-            <button id="btn-reset"> Go back to normal view </button>
+        <div class="control-group" style="margin-top: 10px;">
+            <button id="btn-reset">Reset View</button>
         </div>
 
         <div class="stats">
-            <div> Zoom: <span id="stat-zoom">1.0x</span></div>
-            <div> Re: <span id="stat-x">-0.70000000</span></div>
-            <div> Im: <span id="stat-y">0.00000000</span></div>
-            <div> FPS: <span id="stat-fps">60</span></div>
+            <div>Zoom: <span id="stat-zoom">1.0x</span></div>
+            <div>Re: <span id="stat-x">-0.70000000</span></div>
+            <div>Im: <span id="stat-y">0.00000000</span></div>
+            <div>FPS: <span id="stat-fps">60</span></div>
         </div>
 
         <div class="hint">
-            <strong> Controls:</strong><br>
-            - Scroll mouse wheel to zoom or use two fingers on trackpad.<br>
-            - Click and drag to move around.<br>
-            -Space to pause color cycling.<br>
-            - Press J to toggle Julia set.
+            <strong>Controls:</strong><br>
+            - Scroll mouse wheel to zoom (zooms to cursor)<br>
+            - Click &amp; drag to pan around<br>
+            - Space to pause color cycling<br>
+            - Press J to toggle Julia set
         </div>
     </div>
 
